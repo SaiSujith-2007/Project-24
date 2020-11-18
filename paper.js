@@ -1,7 +1,6 @@
 class paper
 {
     constructor(x,y,radius){
-    this.image = loadImage("paper.png");
     var options={
         isStatic:false,
         restitution:0.3,
@@ -14,9 +13,9 @@ class paper
     World.add(world,this.body);
     }
     display(){
-        imageMode(RADIUS);
-        image(this.image,this.body.position.x, this.body.position.y, this.radius, this.radius);
         fill("pink");
+        ellipseMode(RADIUS);
+        ellipse(this.body.position.x, this.body.position.y, this.radius, this.radius);
     }
     
 }
